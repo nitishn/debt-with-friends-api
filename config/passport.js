@@ -18,6 +18,7 @@ var dotenv = require('dotenv');
 dotenv.load();
 
 module.exports.passport = {
+  
   local: {
     strategy: require('passport-local').Strategy
   },
@@ -56,18 +57,16 @@ module.exports.passport = {
   //     scope: ['email'] /* email is necessary for login behavior */
   //   }
   // },
-
-  google: {
-    name: 'Google',
-    protocol: 'oauth2',
-    strategy: require('passport-google-oauth').OAuth2Strategy,
-    scope   : ['https://www.googleapis.com/auth/plus.login'],
-    options: {
-      clientID: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET
-    },
-  },
-
+  // google: {
+  //   name: 'Google',
+  //   protocol: 'oauth2',
+  //   strategy: require('passport-google-oauth').OAuth2Strategy,
+  //   scope   : ['https://www.googleapis.com/auth/plus.login'],
+  //   options: {
+  //     clientID: process.env.GOOGLE_CLIENT_ID,
+  //     clientSecret: process.env.GOOGLE_CLIENT_SECRET
+  //   },
+  // },
   // cas: {
   //   name: 'CAS',
   //   protocol: 'cas',
